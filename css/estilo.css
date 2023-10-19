@@ -1,0 +1,136 @@
+/*reset*/
+*{
+    padding: 0%;
+    margin: 0%;
+}
+/*grid*/
+body{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;   
+}
+header{
+    grid-area: 1 / 1 / 2 / 6; 
+}
+main{
+     grid-area: 2 / 1 / 6 / 6; 
+}
+/*header*/
+
+.nav {
+    background-color: #333;
+    color: #fff; /* Color del texto en el header */
+    text-align: center; /* Centrar el contenido en el header */
+    font-family: 'Roboto', sans-serif;
+}
+.nav__ul{
+    text-align: center;
+    width: 100%;
+}
+.nav__li{
+    display: inline-block;
+    padding: 12px;
+    text-align: center;
+}
+.nav__li a{
+    color: #fff;
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/*titulos*/
+.titulo{
+    font-size: 80px;
+    padding-left: 38%;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    color: aliceblue;
+    text-shadow: 0 0 10px black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.texto{
+    height: 0;
+    font-size: x-large;
+    color: antiquewhite;
+    padding-bottom: 400px;
+    padding-top: 100px;
+    display: inline;
+    text-shadow: 0 0 10px black;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+/*videos*/
+.video{
+    padding-bottom: 10%;
+    display: inline;
+    float: left;
+    padding-right: 60px;
+}
+
+.nav__responsive-ul{
+    display: none;
+}
+
+.nav__responisve-button-container{
+    position: absolute;
+    width: 100%;
+    font-size: 25px;
+    background-color: #69c;
+    margin-top: -64px;
+    z-index: 100000 ;
+}
+.nav__responisve-button{
+    padding: 6px 20px;
+    text-align: right;
+    width: 100%;
+    float: right;
+}
+@media(max-width:940px){
+    ul{
+        list-style: none;
+    }
+    .nav__ul{
+        display: none;
+    }
+    .nav__responsive-ul{
+        display: block;
+        position: absolute;
+        width: 100vmax;
+        height: 37px;
+        padding: 0;
+        background-color: #333;
+    }
+    .nav{
+        height: 37px;
+        width: 100%;
+    }
+    .nav__responsive-li{
+        width: 100%;
+        text-align: left;
+        padding: 9px 20px;
+        float: left;
+    }
+    .nav__responsive-li a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .nav__li-container{
+        background-color: #333;
+        position: relative;
+        top:-1000px;
+        height: 600%;
+        transition: all 1s;
+        z-index: auto;
+        
+    }
+    .nav__responsive-ul:hover > .nav__li-container{
+        top: -27px;
+    }
+    .texto{
+        display: inline-block;
+    }
+}
